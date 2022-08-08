@@ -1,8 +1,8 @@
 // Entire schema is one object
 export default {
     //properties
-    name: 'testimonals',
-    title: 'Testimonals',
+    name: 'testimonials',
+    title: 'Testimonials',
     type: 'document',
     fields: [   //array of fields
         {   //object
