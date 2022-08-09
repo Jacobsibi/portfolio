@@ -8,7 +8,7 @@ const About = () => {
            
         </div>
     )
-    imp
+    
 }
 
 export default About
