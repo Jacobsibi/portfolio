@@ -45,7 +45,7 @@ const Header = () => {
             <motion.div
                 whileInView={{opacity: [0,1]}} 
                 transition={{ duration: 0.5, delayChildren: 0.5 }}
-                className="app_header-img"            
+                className="app__header-img"            
             >
                 <img src={images.profile} alt="profile_bg"></img>
                 <motion.img
@@ -63,7 +63,7 @@ const Header = () => {
                 className="app__header-circles"
             
             >
-                {[images.flutter, images.redux, images.sass].map((circle, index) => (
+                {[images.react, images.javascript, images.html].map((circle, index) => (
                     <div className="circle-cmp app__flex" key={'circle-${index}'}>
                         <img src={circle} alt="circle" />
                     </div>
