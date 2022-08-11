@@ -73,6 +73,12 @@
     .tag-cmp {
         flex-direction: column;
         margin-top: 3rem;
+
+        p {
+            width: 100%;
+            text-transform: uppercase;
+            text-align: right;
+        }
     }
     
 

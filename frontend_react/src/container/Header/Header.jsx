@@ -19,28 +19,32 @@ const Header = () => {
     return (
         <div id="home" className="app__header app_flex">
             <motion.div
-            //animate from minus value from invisible to fully visible
+            //animate from minus value --> invisible to fully visible over 0.5 seconds
             whileInView={{ x: [-100, 0], opacity: [0,1]}} 
             transition={{ duration: 0.5 }}
             className="app_header-info"
             >
-                <div className="app_header-badge">
+                <div className="app__header-badge">
                     <div className="badge-cmp app__flex">
-                        <span> 👋 </span>
+                        <span>👋</span>
                         <div style={{ marginLeft: 20 }}>
                             <p className="p-text">Hello, I am</p>
                             <h1 className="head-text">Jacob</h1>
                         </div>
                     </div>
+
+                    
                     <div className="tag-cmp app__flex"> 
                     <p className="p-text">Web Developer</p>
                     <p className="p-text">Student</p>
                     </div>
                 </div>
             </motion.div>
+
+
             <motion.div
                 whileInView={{opacity: [0,1]}} 
-                transition={{ duration: 0.5,delayChildren: 0.5 }}
+                transition={{ duration: 0.5, delayChildren: 0.5 }}
                 className="app_header-img"            
             >
                 <img src={images.profile} alt="profile_bg"></img>
@@ -69,6 +73,6 @@ const Header = () => {
             </motion.div>
         </div>
     )
-}
+};
 
 export default Header
