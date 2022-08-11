@@ -64,7 +64,7 @@ const Header = () => {
             
             >
                 {[images.react, images.javascript, images.html].map((circle, index) => (
-                    <div className="circle-cmp app__flex" key={'circle-${index}'}>
+                    <div className="circle-cmp app__flex" key={`circle-${index}`}>
                         <img src={circle} alt="circle" />
                     </div>
                 ))}
