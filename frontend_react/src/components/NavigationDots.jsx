@@ -2,7 +2,8 @@ import React from 'react'
 
 
 //one prop to know which section it's currently on
-const NavigationDots = ( { active }) => (
+const NavigationDots = ({ active }) => {
+    return (
         <div className="app__navigation">
             {['home', 'about', 'work', 'skills', 'testimonial', 'contact'].map((item, index) => (
                 <a 
@@ -14,6 +15,7 @@ const NavigationDots = ( { active }) => (
                 />
             ))}
         </div>
-);
+    )
+}
 
 export default NavigationDots
