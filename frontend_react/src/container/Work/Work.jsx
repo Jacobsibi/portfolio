@@ -7,12 +7,10 @@ import {urlFor, client} from '../../client';
 import './Work.scss';
 
 const Work = () => {
-
-    const [activeFilter, setActiveFilter] = useState('All');
-    const [animateCard, setAnimateCard] = useState({y: 0, opacity: 1});
     const [works, setWorks] = useState([]);
     const [filterWork, setFilterWork] = useState([]);
-
+    const [activeFilter, setActiveFilter] = useState('All');
+    const [animateCard, setAnimateCard] = useState({y: 0, opacity: 1});
 
     useEffect(() => {
         const query = '*[_type == "works"]';
@@ -22,19 +20,25 @@ const Work = () => {
             setWorks(data);
             setFilterWork(data);
         })
-    }, [])
-
-
-
-
-
+    }, []);
 
     const handleWorkFilter = (item) => {
-
-    }
+        setActiveFilter(item);
+        setAnimateCard([{ y: 100, opacity: 0 }]);
+    
+        setTimeout(() => {
+          setAnimateCard([{ y: 0, opacity: 1 }]);
+    
+          if (item === 'All') {
+            setFilterWork(works);
+          } else {
+            setFilterWork(works.filter((work) => work.tags.includes(item)));
+          }
+        }, 500);
+      };
     return (
     <> {/* react fragment */}
-        <h2 className="head-text">My Creative <span>Portfolio</span> <br />means  <span>Section</span></h2>
+        <h2 className="head-text">My Creative <span>Portfolio</span> <br /><span> Section</span></h2>
         <div className="app__work-filter">
             {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item,index) => (
           <div 
@@ -89,7 +93,7 @@ const Work = () => {
           <div className="app__work-content app__flex">
             <h4 className="bold-text">{work.title}</h4>
                 <p className="p-text" style={{marginTop: 10}}>{work.description}</p>
-            <div className="app__work-tag app_flex">
+            <div className="app__work-tag app__flex">
                 <p className="p-text">{work.tags[0]}</p>
             </div>
           </div>
