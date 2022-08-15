@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
-import { images } from '../../constants';
-import './About.scss';
+import {AppWrap } from '../../wrapper';
 import {urlFor, client} from '../../client';
+import './About.scss';
 
-{/* Array of objects  
-const abouts = [
-    // each object must have title, description,
-    { title: 'Web Development', description: 'I am a good web developer', imgUrl: images.about01},
-    { title: 'Backend', description: 'I am a good web developer', imgUrl: images.about02},
-    { title: 'Java Development', description: 'I am a good web developer', imgUrl: images.about03},
-    { title: 'Full Stack Development', description: 'I am a good web developer', imgUrl: images.about04}
-*/}
 const About = () => {
 
     //fetch real dynamic data using react and sanity instead of static data
@@ -60,4 +51,4 @@ const About = () => {
   );
 };
 
-export default About
+export default AppWrap(About, 'about');
