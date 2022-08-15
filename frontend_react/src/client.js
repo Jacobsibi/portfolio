@@ -1,0 +1,20 @@
+//connect sanity client with react application
+import sanityClient from '@sanity/client';
+import imageUrlBuilder from '@sanity/image-url';
+
+//call as function and provide object as parameter
+//use sanity client to fetch data from sanity dashboard
+export const client = sanityClient({
+    projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
+    dataset: 'production',
+    apiVersion: '2022-08-01',
+    useCdn: true,
+    token: process.env.REACT_APP_SANITY_TOKEN,
+});
+// to keep client data safe, specially 'token', created .env file
+
+//useful for images
+const builder = imageUrlBuilder(client);
+
+//required line of code for using images with sanity
+export const urlFor = (source) => builder.image(source);
