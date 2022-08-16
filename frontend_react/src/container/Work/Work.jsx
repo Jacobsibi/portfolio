@@ -22,10 +22,13 @@ const Work = () => {
         })
     }, []);
 
+    //Filtering each category
     const handleWorkFilter = (item) => {
         setActiveFilter(item);
+        //retrigger shuffle animation of cards
         setAnimateCard([{ y: 100, opacity: 0 }]);
     
+        //retrigger animation
         setTimeout(() => {
           setAnimateCard([{ y: 0, opacity: 1 }]);
     
