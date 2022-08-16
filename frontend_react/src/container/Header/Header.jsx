@@ -19,12 +19,12 @@ const scaleVariants = {
 
 const Header = () => {
     return (
-        <div className="app__header app_flex">
+        <div className="app__header app__flex">
             <motion.div
             //animate from minus value --> invisible to fully visible over 0.5 seconds
-            whileInView={{ x: [-100, 0], opacity: [0,1]}} 
+            whileInView={{ x: [-100, 0], opacity: [0, 1]}} 
             transition={{ duration: 0.5 }}
-            className="app_header-info"
+            className="app__header-info"
             >
                 <div className="app__header-badge">
                     <div className="badge-cmp app__flex">
@@ -37,13 +37,12 @@ const Header = () => {
 
                     
                     <div className="tag-cmp app__flex"> 
-                    <p className="p-text">Web Developer</p>
-                    <p className="p-text">Student</p>
+                     <p className="p-text">Web Developer</p>
+                     <p className="p-text">Student</p>
                     </div>
                 </div>
             </motion.div>
-
-
+            
             <motion.div
                 whileInView={{opacity: [0,1]}} 
                 transition={{ duration: 0.5, delayChildren: 0.5 }}
@@ -70,8 +69,6 @@ const Header = () => {
                         <img src={circle} alt="circle" />
                     </div>
                 ))}
-
-
             </motion.div>
         </div>
     )
