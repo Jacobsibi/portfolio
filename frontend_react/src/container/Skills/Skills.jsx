@@ -48,7 +48,19 @@ const Skills = () => {
           ))}
         </motion.div>
 
-        <motion.div className="app__skills-exp">
+
+        <div className="app__skills-exp">
+          {experiences.map((experience) => (
+            <motion.div
+              className="app__skills-exp-item"
+              key={experience.year}
+            >
+              <div className="app__skills-exp-year">
+                <p className="bold-text">{experience.year}</p>
+        </div>
+
+
+        <motion.div className="app__skills-exp-works">
         {experiences.works.map((work) => (
             <>
             <motion.div
@@ -62,28 +74,24 @@ const Skills = () => {
               <h4 className="bold-text">{work.name}</h4>
               <p className="p-text">{work.company}</p>
         </motion.div>
-        {/*hover over above div and see more information = create react tool tip */}
-           
+        {/*hover over above div and see more information = create react tool tip */}   
         <ReactTooltip
-        id={work.name}
-        effect="solid"
-        arrowColor="#fff"
-        className="skills-tooltip"
+            id={work.name}
+            effect="solid"
+            arrowColor="#fff"
+            className="skills-tooltip"
         >
-        {work.desc}
+            {work.desc}
         </ReactTooltip>
-           
-           
-           
-           
-           
-           
-            </>
+           </>
         ))}
-    </motion.div>
+          </motion.div>
+        </motion.div>
+        ))}
         </div>
-      </>
-    )
-}
+      </div>
+    </>
+    );
+};
 
 export default Skills;
