@@ -2,9 +2,9 @@
     flex: 1;
     width: 100%;
     flex-direction: column;
-  }
+}
   
-  .app__skills-container {
+.app__skills-container {
     width: 80%;
     margin-top: 3rem;
   
@@ -15,9 +15,9 @@
       width: 100%;
       flex-direction: column;
     }
-  }
+}
   
-  .app__skills-list {
+.app__skills-list {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
@@ -32,9 +32,9 @@
       justify-content: center;
       align-items: center;
     }
-  }
+}
 
-  .app__skills-item {
+.app__skills-item {
     flex-direction: column;
     text-align: center;
   
@@ -80,5 +80,86 @@
         p {
           margin-top: 1rem;
         }
-      }
     }
+}
+
+.app__skills-exp {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    //show one experience above another
+    flex-direction: column;
+
+    @media screen and (max-width: 900px) {
+        margin-top: 2rem;
+      }
+}
+
+.app__skills-exp-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+
+.app__skills-exp-works {
+    flex: 1;
+
+    //target individual work
+    .app_skills-exp-work {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        //ability to hover
+        cursor: pointer;
+
+        h4 {
+            font-weight: 500;
+        }
+
+        p {
+            font-weight: 400;
+            color: var(--grey-color);
+            margin-top: 5px;
+        }
+    }
+}
+
+.app__skills-exp-year {
+    margin-right: 3rem;
+
+    p {
+        //800 = bold
+        font-weight: 800;
+        color: var(--secondary-color);
+    }
+
+    @media screen and (max-width: 450px) {
+        margin-right: 1rem;
+      }
+}
+
+//inorder to style dependencies / specific packages
+//!important is not recommended but required in this use case for tooltip to work.
+.skills-tooltip {
+    max-width: 300px !important;
+    background-color: var(--white-color) !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 5px !important;
+    padding: 1rem !important;
+    color: var(--gray-color) !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+    opacity: 1 !important;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 1.75rem !important;
+      max-width: 500px !important;
+      line-height: 2 !important;
+    }
+  }
