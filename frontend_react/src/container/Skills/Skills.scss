@@ -46,6 +46,7 @@
       width: 90px;
       height: 90px;
       border-radius: 50%;
+      //experiment with #fef4f5 -> styling preference  
       background-color: #fff;
   
       img {
@@ -109,7 +110,7 @@
     flex: 1;
 
     //target individual work
-    .app_skills-exp-work {
+    .app__skills-exp-work {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -124,7 +125,7 @@
 
         p {
             font-weight: 400;
-            color: var(--grey-color);
+            color: var(--gray-color);
             margin-top: 5px;
         }
     }
