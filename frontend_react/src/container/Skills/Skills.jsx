@@ -55,13 +55,12 @@ const Skills = () => {
               className="app__skills-exp-item"
               key={experience.year}
             >
-              <div className="app__skills-exp-year">
-                <p className="bold-text">{experience.year}</p>
-        </div>
-
-
+             <div className="app__skills-exp-year">
+               <p className="bold-text">{experience.year}</p>
+             </div>
+             
         <motion.div className="app__skills-exp-works">
-        {experiences.works.map((work) => (
+        {experience.works.map((work) => (
             <>
             <motion.div
               whileInView={{ opacity: [0, 1] }}
@@ -94,4 +93,4 @@ const Skills = () => {
     );
 };
 
-export default Skills;
+export default AppWrap(Skills, 'skills');
