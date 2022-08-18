@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -45,7 +45,7 @@ const Footer = () => {
             setIsFormSubmitted(true);
         })
   }
-  
+
     return (
       <>
         <h2 className="head-text">Let's grab a coffee</h2>
