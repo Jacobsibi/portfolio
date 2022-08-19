@@ -79,7 +79,7 @@ const Footer = () => {
               className="p-text"
               placeholder="Your Message"
               value={message}
-              name={message}
+              name="message"
               onChange={handleChangeInput}
               />
             </div>
@@ -98,5 +98,5 @@ const Footer = () => {
 export default AppWrap(
     MotionWrap(Footer, 'app__footer'),
     'contact',
-    'app__whitebg'
+    "app__primarybg" 
 )
